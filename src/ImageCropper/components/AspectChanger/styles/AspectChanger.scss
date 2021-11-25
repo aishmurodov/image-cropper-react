@@ -1,0 +1,92 @@
+.ImageCropper-AspectChanger {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &__ratios {
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--image-cropper-aspect-changer-button-border-radius);
+    overflow: hidden;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    gap: var(--image-cropper-aspect-changer-right-gap);
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    font-weight: var(--image-cropper-aspect-changer-button-weight);
+    height: var(--image-cropper-aspect-changer-button-height);
+    transition: var(--image-cropper-aspect-changer-button-transition);
+    border: 0;
+    cursor: pointer;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    font-size: var(--image-cropper-aspect-changer-button-font-size);
+
+    gap: var(--image-cropper-aspect-changer-button-gap);
+
+    &:not([data-colored="0"]) {
+      background: var(--image-cropper-aspect-changer-button-background);
+      color: var(--image-cropper-aspect-changer-button-color);
+    }
+
+    &[data-colored="0"] {
+      background: transparent;
+      color: var(--image-cropper-aspect-changer-button-color);
+      padding: 0!important;
+    }
+
+    &[data-bordered="1"] {
+      border-radius: var(--image-cropper-aspect-changer-button-border-radius);
+    }
+
+    &:not([data-save="1"]) {
+      width: var(--image-cropper-aspect-changer-button-min-width);
+
+      &:active, &.active {
+        background: var(--image-cropper-aspect-changer-button-background-active);
+        color: var(--image-cropper-aspect-changer-button-color-active);
+        font-weight: var(--image-cropper-aspect-changer-button-weight-active);
+      }
+    }
+
+    &[data-save="1"] {
+      padding: var(--image-cropper-aspect-changer-button-padding);
+
+      &:not([data-colored="0"]) {
+        background: var(--image-cropper-aspect-changer-button-background-save);
+        color: var(--image-cropper-aspect-changer-button-color-save);
+      }
+    }
+
+    &__icon {
+      width: 15px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    &__inner {
+      img {
+        max-width: 100%;
+        height: auto;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  }
+}

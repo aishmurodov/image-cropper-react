@@ -1,0 +1,75 @@
+.ImageCropper-AspectChanger {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.ImageCropper-AspectChanger__ratios {
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--image-cropper-aspect-changer-button-border-radius);
+  overflow: hidden;
+}
+.ImageCropper-AspectChanger__right {
+  display: flex;
+  flex-direction: row;
+  gap: var(--image-cropper-aspect-changer-right-gap);
+  flex: 1;
+  justify-content: flex-end;
+}
+.ImageCropper-AspectChanger__button {
+  font-weight: var(--image-cropper-aspect-changer-button-weight);
+  height: var(--image-cropper-aspect-changer-button-height);
+  transition: var(--image-cropper-aspect-changer-button-transition);
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-size: var(--image-cropper-aspect-changer-button-font-size);
+  gap: var(--image-cropper-aspect-changer-button-gap);
+}
+.ImageCropper-AspectChanger__button:not([data-colored="0"]) {
+  background: var(--image-cropper-aspect-changer-button-background);
+  color: var(--image-cropper-aspect-changer-button-color);
+}
+.ImageCropper-AspectChanger__button[data-colored="0"] {
+  background: transparent;
+  color: var(--image-cropper-aspect-changer-button-color);
+  padding: 0 !important;
+}
+.ImageCropper-AspectChanger__button[data-bordered="1"] {
+  border-radius: var(--image-cropper-aspect-changer-button-border-radius);
+}
+.ImageCropper-AspectChanger__button:not([data-save="1"]) {
+  width: var(--image-cropper-aspect-changer-button-min-width);
+}
+.ImageCropper-AspectChanger__button:not([data-save="1"]):active, .ImageCropper-AspectChanger__button:not([data-save="1"]).active {
+  background: var(--image-cropper-aspect-changer-button-background-active);
+  color: var(--image-cropper-aspect-changer-button-color-active);
+  font-weight: var(--image-cropper-aspect-changer-button-weight-active);
+}
+.ImageCropper-AspectChanger__button[data-save="1"] {
+  padding: var(--image-cropper-aspect-changer-button-padding);
+}
+.ImageCropper-AspectChanger__button[data-save="1"]:not([data-colored="0"]) {
+  background: var(--image-cropper-aspect-changer-button-background-save);
+  color: var(--image-cropper-aspect-changer-button-color-save);
+}
+.ImageCropper-AspectChanger__button__icon {
+  width: 15px;
+}
+.ImageCropper-AspectChanger__button input[type=file] {
+  display: none;
+}
+.ImageCropper-AspectChanger__button__inner img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=AspectChanger.css.map */

@@ -1,0 +1,10 @@
+.ImageCropper-Closer {
+  color: var(--image-cropper-closer-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: var(--image-cropper-closer-margin);
+  width: var(--image-cropper-closer-width);
+  height: var(--image-cropper-closer-height);
+  cursor: pointer;
+}

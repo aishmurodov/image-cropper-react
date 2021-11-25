@@ -1,0 +1,69 @@
+:root {
+  --image-cropper-overlay-opacity: .5;
+  --image-cropper-overlay-background: #c4cad6;
+
+  --image-cropper-background: #fff;
+
+  --image-cropper-items-gap: 32px;
+
+  --image-cropper-padding-top: 40px;
+  --image-cropper-padding-right: 32px;
+  --image-cropper-padding-bottom: 32px;
+  --image-cropper-padding-left: 32px;
+
+  --image-cropper-border-radius: 10px;
+
+  --image-cropper-horizontal-height: 602px;
+  --image-cropper-vertical-height: 690px;
+
+  --image-cropper-heading-size: 20px;
+  --image-cropper-heading-font: "Arial";
+  --image-cropper-heading-weight: bold;
+
+  --image-cropper-closer-color: #d3d8e6;
+  --image-cropper-closer-margin: 16px 16px 0 0;
+  --image-cropper-closer-width: 16px;
+  --image-cropper-closer-height: 16px;
+
+  --image-cropper-image-container-background: #87878a;
+  --image-cropper-image-container-horizontal-width: 700px;
+  --image-cropper-image-container-horizontal-height: 394px;
+  --image-cropper-image-container-vertical-width: 700px;
+  --image-cropper-image-container-vertical-height: 482px;
+
+  --image-cropper-aspect-changer-button-transition: all.25s linear;
+  --image-cropper-aspect-changer-button-background: #edeff3;
+  --image-cropper-aspect-changer-button-color: #73819e;
+  --image-cropper-aspect-changer-button-gap: 5px;
+  --image-cropper-aspect-changer-button-font-size: 14px;
+  --image-cropper-aspect-changer-button-color-active: #0050cf;
+
+  --image-cropper-aspect-changer-button-background-save: #0050cf;
+  --image-cropper-aspect-changer-button-color-save: #fff;
+
+  --image-cropper-aspect-changer-button-weight-active: 700;
+  --image-cropper-aspect-changer-button-weight: 700;
+  --image-cropper-aspect-changer-button-background-active: #e5edfa;
+  --image-cropper-aspect-changer-button-min-width: 50px;
+  --image-cropper-aspect-changer-button-height: 45px;
+  --image-cropper-aspect-changer-button-padding: 0 25px;
+  --image-cropper-aspect-changer-button-border-radius: 7px;
+  --image-cropper-aspect-changer-right-gap: 32px;
+
+  --image-cropper-loader-container-background: #edeff3;
+  --image-cropper-loader-background: #fff;
+  --image-cropper-loader-line-color: #0060cf;
+  --image-cropper-loader-line-height: 5px;
+  --image-cropper-loader-line-transition: all.25s linear;
+  --image-cropper-loader-top-color: #1e1e23;
+  --image-cropper-loader-top-weight: 700;
+  --image-cropper-loader-bottom-color: #909bb2;
+  --image-cropper-loader-border-radius: 5px;
+  --image-cropper-loader-width: 450px;
+  --image-cropper-loader-padding: 16px 32px;
+  --image-cropper-loader-gap: 10px;
+
+  --image-cropper-image-filter: blur(2px);
+  --image-cropper-modal-background: #333;
+  --image-cropper-modal-opacity: 0.3;
+}
