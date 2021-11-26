@@ -6,17 +6,19 @@ import ImageCropperAspectChangerInterface from "../../interfaces/ImageCropperAsp
 const AspectChanger: React.FunctionComponent<ImageCropperAspectChangerInterface> = (props) => {
     const [lastRotation, setLastRotation] = useState<number>(Date.now() / 1000 | 0)
 
+    const onClickRotation = () => {
+        const now = Date.now() / 1000 | 0
+        if (now - lastRotation >= 1) {
+            props.onRotationClick()
+            setLastRotation(now)
+        }
+    }
+
     return <div className="ImageCropper-AspectChanger">
         <button
             className="ImageCropper-AspectChanger__button"
             data-bordered="1"
-            onClick={() => {
-                const now = Date.now() / 1000 | 0
-                if (now - lastRotation >= 1) {
-                    props.onRotationClick()
-                    setLastRotation(now)
-                }
-            }}>
+            onClick={onClickRotation}>
             <span className="ImageCropper-AspectChanger__button__inner">
                 <img src={rotateIcon} alt=""/>
             </span>
