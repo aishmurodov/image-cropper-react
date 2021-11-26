@@ -3,7 +3,7 @@ import ImageCropperAspectChangerButtonInterface from "../../../../interfaces/Ima
 
 const AspectChangerButton: React.FunctionComponent<ImageCropperAspectChangerButtonInterface> = (props) => {
     return <button
-        className={`ImageCropper-AspectChanger__button ${props.active ? 'active' : ""}`}
+        className={`ImageCropper-AspectChanger__button${props.active ? ' active' : ""}`}
         onClick={() => {props.onClick(props.ratio)}}>
             <span className="ImageCropper-AspectChanger__button__inner">
                 {props.children}
