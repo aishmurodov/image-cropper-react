@@ -4,6 +4,7 @@ import ImageCropperAspectChangerInterface from "../../interfaces/ImageCropperAsp
 import RotateButton from "./components/RotateButton";
 import ImageChangerButton from "./components/ImageChangerButton";
 import SaveButton from "./components/SaveButton";
+import AspectChangerButton from "./components/AspectChangerButton";
 
 const AspectChanger: React.FunctionComponent<ImageCropperAspectChangerInterface> = (props) => {
 
@@ -15,14 +16,13 @@ const AspectChanger: React.FunctionComponent<ImageCropperAspectChangerInterface>
                 <div className="ImageCropper-AspectChanger__ratios">
                 {
                     props.ratios.map((ratio) => {
-                        return <button
+                        return <AspectChangerButton
                             key={ratio.ratio}
-                            className={`ImageCropper-AspectChanger__button ${props.initedRatio === ratio.ratio ? 'active' : ""}`}
-                            onClick={() => {props.onChangeRatio(ratio.ratio)}}>
-                            <span className="ImageCropper-AspectChanger__button__inner">
-                                {ratio.title}
-                            </span>
-                        </button>
+                            ratio={ratio.ratio}
+                            onClick={props.onChangeRatio}
+                            active={props.initedRatio === ratio.ratio}>
+                            {ratio.title}
+                        </AspectChangerButton>
                     })
                 }
                 </div>
