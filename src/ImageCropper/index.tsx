@@ -9,6 +9,9 @@ import Heading from "./components/Heading";
 import Closer from "./components/Closer";
 import ImageContainer from "./components/ImageContainer";
 import AspectChanger from "./components/AspectChanger";
+import DefaultRotateAngle from "./constants/DefaultRotateAngle";
+import ToggleActionsDelay from "./constants/ToggleActionsDelay";
+import Ratios from "./constants/Ratios";
 
 
 const ImageCropper: React.FunctionComponent<ImageCropperInterface> = (props) => {
@@ -93,12 +96,7 @@ const ImageCropper: React.FunctionComponent<ImageCropperInterface> = (props) => 
                         setTimeout(() => {setToggleRotation(false)})
                     }
                 }}
-                ratios={[
-                    { title: "16:9", ratio: 16/9 },
-                    { title: "4:3", ratio: 4/3 },
-                    { title: "2:1", ratio: 2 },
-                    { title: "1:1", ratio: 1 },
-                ]}
+                ratios={Ratios}
                 onChangeRatio={(newRatio) => {
                     if (!props.freezeActions) {
                         setImageRatio(newRatio)
@@ -125,7 +123,7 @@ const ImageCropper: React.FunctionComponent<ImageCropperInterface> = (props) => 
                         setToggleEnabledWithData(true)
                         setTimeout(() => {
                             setToggleEnabledWithData(false)
-                        }, 1000)
+                        }, ToggleActionsDelay)
                     }
                 }}
             />
@@ -145,7 +143,7 @@ const ImageCropper: React.FunctionComponent<ImageCropperInterface> = (props) => 
             image={image}
             ratio={imageRatio}
             imageSizes={imageSize}
-            angle={props.angle ?? 45}
+            angle={props.angle ?? DefaultRotateAngle}
             toggleAngle={toggleRotation}
             toggleClose={toggleEnabledWithData}
             freezeActions={props.freezeActions}
