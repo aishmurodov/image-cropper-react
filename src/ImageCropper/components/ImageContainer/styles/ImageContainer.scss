@@ -233,24 +233,36 @@
         cursor: nesw-resize;
         right: -3px;
         top: -3px;
+        background: transparent;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
       }
 
       &.point-nw {
         cursor: nwse-resize;
         left: -3px;
         top: -3px;
+        background: transparent;
+        border-top: 3px solid #fff;
+        border-left: 3px solid #fff;
       }
 
       &.point-sw {
         bottom: -3px;
         cursor: nesw-resize;
         left: -3px;
+        background: transparent;
+        border-bottom: 3px solid #fff;
+        border-left: 3px solid #fff;
       }
 
       &.point-se {
         bottom: -3px;
         cursor: nwse-resize;
         right: -3px;
+        background: transparent;
+        border-bottom: 3px solid #fff;
+        border-right: 3px solid #fff;
       }
 
       &.point-w, &.point-e, &.point-n, &.point-s {
